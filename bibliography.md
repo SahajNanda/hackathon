@@ -13,15 +13,15 @@ title: "Bibliography Creator"
   <br><br>
   <div id="websiteInfo">
     <form>
-      <label for="websiteAuthor">Author:</label><br>
+      <label for="websiteAuthor">Author:</label>
       <input type="text" id="websiteAuthor" name="websiteAuthor"><br>
-      <label for="websiteTitle">Article Title:</label><br>
+      <label for="websiteTitle">Article Title:</label>
       <input type="text" id="websiteTitle" name="websiteTitle"><br>
-      <label for="websiteName">Website Title</label><br>
+      <label for="websiteName">Website Title</label>
       <input type="text" id="websiteName" name="websiteName"><br>
-      <label for="websiteURL">Full URL:</label><br>
+      <label for="websiteURL">Full URL:</label>
       <input type="text" id="websiteURL" name="websiteURL"><br>
-      <label for="websitePublisher">Publisher:</label><br>
+      <label for="websitePublisher">Publisher:</label>
       <input type="text" id="websitePublisher" name="websitePublisher"><br>
     </form>
   </div>
@@ -31,4 +31,6 @@ title: "Bibliography Creator"
   <script>
   $('#type').on('change',function(){
     if($(this).val()==="website"){
+      $("#websiteInfo").hide()
+  }}
   </script>
