@@ -21,7 +21,7 @@ title: "Bibliography Creator"
       <input type="text" id="websiteName" name="websiteName"><br>
       <label for="websiteURL">Full URL:</label><br>
       <input type="text" id="websiteURL" name="websiteURL"><br>
-      <label for="websitePublisher">Publisher</label><br>
+      <label for="websitePublisher">Publisher:</label><br>
       <input type="text" id="websitePublisher" name="websitePublisher"><br>
     </form>
   </div>
