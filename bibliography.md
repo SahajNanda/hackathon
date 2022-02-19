@@ -2,8 +2,8 @@
 layout: default
 title: "Bibliography Creator"
 ---
-Insert the necessary information below to recieve your citation.
-<label for="type">Choose a source:</label>
+&nbsp Insert the necessary information below to recieve your citation.
+<label for="type"><br>&nbsp Choose a source:</label>
   <select name="type" id="type">
     <option value="website">website</option>
     <option value="book">book</option>
