@@ -1,6 +1,11 @@
-
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
 <h2>&nbsp; Insert the necessary information below to recieve your citation (test2).</h2>
-<h3>Website:</h3>
+<div class="website">
+    <h3>Website:</h3>
     <form>
       <label for="websiteAuthor">&nbsp;Author: </label>
       <input type="text" id="websiteAuthor" name="websiteAuthor"><br>
@@ -13,21 +18,53 @@
       <label for="websitePublisher">&nbsp;Publisher: </label>
       <input type="text" id="websitePublisher" name="websitePublisher"><br>
     </form>
-<label for="type"><br>&nbsp; Choose a source:</label>
-  <select name="type" id="type">
-    <option value="website">website</option>
-    <option value="book">book</option>
-    <option value="youtube">youtube</option>
-    <option value="twitter">twitter</option>
-  </select>
-  <br><br>
-  
-  
-<script type="text/javascript" src="jquery-ui-1.10.0/tests/jquery-1.9.0.js"></script>
-<script src="jquery-ui-1.10.0/ui/jquery-ui.js"></script>
-  <script>
-  $('#type').on('change',function(){
-    if( $(this).val()==="website"){
-      $("#websiteInfo").hide()
-  }}
-  </script>
+</div>
+<div class="book">
+    <h3>Book:</h3>
+    <form>
+      <label for="bookAuthorFirst">&nbsp;Author's First Name: </label>
+      <input type="text" id="bookAuthorFirst" name="bookAuthorFirst"><br>
+      <label for="bookAuthorLast">&nbsp;Author's Last Name: </label>
+      <input type="text" id="bookAuthorLast" name="bookAuthorLast"><br>
+      <label for="bookTitle">&nbsp;Book Title: </label>
+      <input type="text" id="bookTitle" name="bookTitle"><br>
+      <label for="bookCity">&nbsp;City of Publishing: </label>
+      <input type="text" id="bookCity" name="bookCity"><br>
+      <label for="bookPublisher">&nbsp;Publisher: </label>
+      <input type="text" id="bookPublisher" name="bookPublisher"><br>
+      <label for="bookPublishDate">&nbsp;Publish Date: </label>
+      <input type="text" id="bookPublishDate" name="bookPublishDate"><br>
+        <button onclick="bookCitation()">Submit</button>
+    </form>
+</div>
+<div class="twitter">
+    <h3>Tweet</h3>
+    <form>
+      <label for="twitterHandle">&nbsp;Author's Handle: </label>
+      <input type="text" id="twitterHandle" name="twitterHandle"><br>
+      <label for="tweet">&nbsp;Article Title: </label>
+      <input type="text" id="tweet" name="tweet"><br>
+      <label for="tweetDate">&nbsp;Date of Tweet: </label>
+      <input type="text" id="tweetDate" name="tweetDate"><br>
+      <label for="tweetURL">&nbsp;Full URL: </label>
+      <input type="text" id="tweetURL" name="tweetURL"><br>
+          <button onclick="tweetCitation()">Submit</button>
+    </form>
+</div>
+<div class="youtube">
+    <h3>Youtube Video:</h3>
+    <form>
+      <label for="youtubeChannel">&nbsp;Channel Name: </label>
+      <input type="text" id="youtubeChannel" name="youtubeChannel"><br>
+      <label for="timestamp">&nbsp;Timestamp: </label>
+      <input type="text" id="timestamp" name="timestamp"><br>
+      <label for="videoTitle">&nbsp;Video Title: </label>
+      <input type="text" id="videoTitle" name="videoTitle"><br>
+      <label for="youtubeDate">&nbsp;Publish Date: </label>
+      <input type="text" id="youtubeDate" name="youtubeDate"><br>
+          <button onclick="youtubeCitation()">Submit</button>
+    </form>
+</div>
+<p id="result"></p>
+    </body>
+</html>
