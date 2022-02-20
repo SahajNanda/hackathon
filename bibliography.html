@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script>
+            function websiteCitation() {
+                document.getElementById("result").innerHTML = document.getElementById("websiteAuthor") + ". <i>" + document.getElementById("websiteTitle") + "</i>. " + document.getElementById("websiteName") + ", " + document.getElementById("websiteDate") + ", " + document.getElementById("websiteURL") + ".";
+            }
+             function bookCitation() {
+                document.getElementById("result").innerHTML = document.getElementById("bookAuthor") + ". " + document.getElementById("bookTitle") + ". " + document.getElementById("bookPublisher") + ", " + document.getElementById("bookPublishDate") + ", " + document.getElementById("bookCity") + ".";
+            }
+            function tweetCitation() {
+                document.getElementById("result").innerHTML = document.getElementById("twitterhandle") + ". " + document.getElementById("tweet") + ". <i>Twitter</i>, " + document.getElementById("tweetDate") + ", " + document.getElementById("tweetURL") + ".";
+            }
+            function youtubeCitation() {
+                document.getElementById("result").innerHTML = document.getElementById("uploaderName") + ". " + document.getElementById("videoTitle") + "<i> Youtube</i>, uploaded by " + document.getElementById("youtubeChannel") + ", " + document.getElementById("youtubeDate") + ", " + document.getElementById("youtubeURL") + ".";
+            }
+        </script>
     </head>
     <body>
 <h2>&nbsp; Insert the necessary information below to recieve your citation (test2).</h2>
 <div class="website">
     <h3>Website:</h3>
     <form>
-      <label for="websiteAuthor">&nbsp;Author: </label>
+      <label for="websiteAuthor">&nbsp;Author (Last name, First name): </label>
       <input type="text" id="websiteAuthor" name="websiteAuthor"><br>
       <label for="websiteTitle">&nbsp;Article Title: </label>
       <input type="text" id="websiteTitle" name="websiteTitle"><br>
@@ -15,17 +29,16 @@
       <input type="text" id="websiteName" name="websiteName"><br>
       <label for="websiteURL">&nbsp;Full URL: </label>
       <input type="text" id="websiteURL" name="websiteURL"><br>
-      <label for="websitePublisher">&nbsp;Publisher: </label>
-      <input type="text" id="websitePublisher" name="websitePublisher"><br>
+      <label for="websiteDate">&nbsp;Date of Article (DD Mon. YYYY): </label>
+      <input type="text" id="websiteDate" name="websiteDate"><br>
+        <button onclick="websiteCitation()">Submit</button>
     </form>
 </div>
 <div class="book">
     <h3>Book:</h3>
     <form>
-      <label for="bookAuthorFirst">&nbsp;Author's First Name: </label>
-      <input type="text" id="bookAuthorFirst" name="bookAuthorFirst"><br>
-      <label for="bookAuthorLast">&nbsp;Author's Last Name: </label>
-      <input type="text" id="bookAuthorLast" name="bookAuthorLast"><br>
+      <label for="bookAuthor">&nbsp;Author's Name (Last name, First Name): </label>
+      <input type="text" id="bookAuthor" name="bookAuthor"><br>
       <label for="bookTitle">&nbsp;Book Title: </label>
       <input type="text" id="bookTitle" name="bookTitle"><br>
       <label for="bookCity">&nbsp;City of Publishing: </label>
@@ -42,9 +55,9 @@
     <form>
       <label for="twitterHandle">&nbsp;Author's Handle: </label>
       <input type="text" id="twitterHandle" name="twitterHandle"><br>
-      <label for="tweet">&nbsp;Article Title: </label>
+      <label for="tweet">&nbsp;Entire Tweet (in quotations): </label>
       <input type="text" id="tweet" name="tweet"><br>
-      <label for="tweetDate">&nbsp;Date of Tweet: </label>
+      <label for="tweetDate">&nbsp;Date of Tweet (DD Mon YYYY): </label>
       <input type="text" id="tweetDate" name="tweetDate"><br>
       <label for="tweetURL">&nbsp;Full URL: </label>
       <input type="text" id="tweetURL" name="tweetURL"><br>
@@ -56,12 +69,14 @@
     <form>
       <label for="youtubeChannel">&nbsp;Channel Name: </label>
       <input type="text" id="youtubeChannel" name="youtubeChannel"><br>
-      <label for="timestamp">&nbsp;Timestamp: </label>
-      <input type="text" id="timestamp" name="timestamp"><br>
-      <label for="videoTitle">&nbsp;Video Title: </label>
+      <label for="uploaderName">&nbsp;Uploader Name (Last Name, First Name): </label>
+      <input type="text" id="uploaderName" name="uploaderName"><br>
+      <label for="videoTitle">&nbsp;Video Title (in quotes): </label>
       <input type="text" id="videoTitle" name="videoTitle"><br>
-      <label for="youtubeDate">&nbsp;Publish Date: </label>
+      <label for="youtubeDate">&nbsp;Publish Date (DD Mon. YYYY): </label>
       <input type="text" id="youtubeDate" name="youtubeDate"><br>
+      <label for="youtubeURL">&nbsp;Video URL: </label>
+      <input type="text" id="youtubeURL" name="youtubeURL"><br>
           <button onclick="youtubeCitation()">Submit</button>
     </form>
 </div>
